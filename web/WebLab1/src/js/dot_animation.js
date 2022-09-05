@@ -1,9 +1,4 @@
 window.onload = function () {
-
-    document.getElementById('table').on = function () {
-        console.log('asdassd')
-    }
-
     document.querySelector('.values').onchange = function () {
 
         let Y_value = $('#Y_value').val();

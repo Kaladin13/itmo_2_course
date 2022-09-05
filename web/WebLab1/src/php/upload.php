@@ -1,6 +1,7 @@
 <?php
 
 require_once "hit_result.php";
+require_once "validator.php";
 
 date_default_timezone_set('Europe/Moscow');
 
@@ -8,16 +9,13 @@ $start = microtime(true);
 $current_time = date("H:i:s");
 
 if (!isset($_POST["x"]) || !isset($_POST["y"]) || !isset($_POST["r"]))
-    die("Requ");
+    die("Permitted parameters are not listed");
 
 $x = $_POST["x"];
 $y = $_POST["y"];
 $r = $_POST["r"];
 
-$allowedValuesOfX = ['-4', '-3', '-2', '-1', '0', '1', '2', '3', '4'];
-$allowedValuesOfR = ['1', '2', '3', '4', '5'];
-
-if (!in_array($x, $allowedValuesOfX) || !preg_match("/^(((-?[0-3])|([3-5]).\d*(?=[1-9])[1-9])|0|(-?[12]))$/", $y) || !in_array($r, $allowedValuesOfR))
+if (!isValid($x, $y, $r))
     die("Data is incorrect!");
 
 $isHit = isHit($x, $y, $r);

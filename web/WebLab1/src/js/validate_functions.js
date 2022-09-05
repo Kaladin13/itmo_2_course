@@ -17,13 +17,23 @@ function validateForm(print_permission) {
 }
 
 function validateY(field) {
+    const decimal = /^[-+]?[0-9]+\.[0-9]+$/;
+    const integer = /^[-+]?[0-9]+$/;
 
     if (!(field.trim() === "")) {
-        if (/^(0$|-?[1-9]\d*(\.\d*[1-9]$)?|-?0\.\d*[1-9])$/.test(field)) {
-            if ((parseInt(field) > -3) && (parseInt(field) < 5)) {
-                return "";
-            } else return "Координата Y задается числом в промежутке (-3...5)!\n";
-        } else return "Координата Y задается числом!\n";
+
+        if (!field.match(decimal) && !field.match(integer)) {
+            return "Координата Y задается числом!\n";
+        }
+
+        const y = parseFloat(field);
+
+        if (y <= -3 || y >= 5) {
+            return "Координата Y задается числом в промежутке (-3...5)!\n";
+        }
+
+        return "";
+
     } else return "Не введена координата Y!\n";
 }
 
