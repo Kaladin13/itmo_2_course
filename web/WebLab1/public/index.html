@@ -49,7 +49,7 @@
             border: 1px solid black;
         }
 
-        #table tr:first-of-type {
+        #table > thead tr:first-of-type {
             background: rgba(0, 0, 0, 0.83);
         }
 
@@ -125,10 +125,6 @@
             font-size: 20px;
         }
 
-        main .user_input .Error_text span {
-            margin: 4px;
-        }
-
         main .user_input .buttons {
             position: absolute;
             left: 20%;
@@ -148,12 +144,13 @@
             width: 150px;
             height: 30px;
         }
+
     </style>
-    <script src="../src/js/validate_functions.js"></script>
-    <script src="../src/js/table_ajax.js"></script>
-    <script src="../src/js/dot_animation.js"></script>
     <script src="../src/js/jquery-3.6.0.js"></script>
+    <script src="../src/js/validate_functions.js"></script>
+    <script src="../src/js/dot_animation.js"></script>
     <script src="../src/js/table_cleaner.js"></script>
+    <script src="../src/js/table_ajax.js"></script>
 </head>
 <body>
 
@@ -271,7 +268,7 @@
                     </div>
                 </div>
 
-                <div class="Error_text">
+                <div class="Error_text" style="margin: 4px">
                     <span id="Y_error"></span>
                     <span id="X_error"></span>
                     <span id="R_error"></span>
@@ -298,6 +295,7 @@
         <!-- Таблица регистрирующая попадания -->
         <div>
             <table id="table">
+                <thead>
                 <tr>
                     <th>X</th>
                     <th>Y</th>
@@ -306,6 +304,9 @@
                     <th>EXECUTION TIME</th>
                     <th>HIT RESULT</th>
                 </tr>
+                </thead>
+                <tbody>
+                </tbody>
             </table>
         </div>
     </section>

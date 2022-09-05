@@ -1,4 +1,9 @@
 window.onload = function () {
+    if (storage.getItem('tableData') != null) {
+        $('#table > tbody').append(storage.getItem('tableData'));
+    }
+
+
     document.querySelector('.values').onchange = function () {
 
         let Y_value = $('#Y_value').val();

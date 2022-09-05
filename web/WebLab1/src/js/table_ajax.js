@@ -1,3 +1,5 @@
+const storage = window.localStorage;
+
 function receiveSubmit() {
 
     window.scrollTo(0, document.querySelector('#table').scrollHeight);
@@ -14,7 +16,10 @@ function receiveSubmit() {
             data: {'y': Y_value.trim(), 'x': X_value.trim(), 'r': R_value.trim()},
             success: function (data) {
                 if (data === "Data is incorrect!") alert("Возникла ошибка: " + data);
-                else $('#table tr:last').after(data);
+                else {
+                    storage.setItem('tableData', (storage.getItem('tableData') != null ? storage.getItem('tableData') : '') + data);
+                    $('#table > tbody').append(data);
+                }
             },
             error: function (data) {
                 alert("Возникла ошибка: " + data);
