@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+
+header {
+    background: rgba(24, 24, 24, 0.83);
+    font-family: cursive, 'ZCOOL KuaiLe', 'Times New Roman';
+    color: white;
+    height: 75px;
+    font-size: 50px;
+    text-align: center;
+    transition: 0.8s;
+}
+
+header:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 40px 5px #f41c52;
+}
