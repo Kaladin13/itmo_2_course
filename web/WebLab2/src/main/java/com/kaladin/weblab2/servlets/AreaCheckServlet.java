@@ -42,6 +42,21 @@ public class AreaCheckServlet extends HttpServlet {
     }
 
     private boolean isHit(Coordinates coordinates) {
-        return true;
+        return isCircleHit(coordinates) || isRectangleHit(coordinates) || isTriangleHit(coordinates);
+    }
+
+    private boolean isTriangleHit(Coordinates coordinates) {
+        boolean isFirstQuarter = coordinates.getX() >= 0 && coordinates.getY() >= 0;
+        return isFirstQuarter && (coordinates.getY() + coordinates.getX() <= coordinates.getR());
+    }
+
+    private boolean isRectangleHit(Coordinates coordinates) {
+        boolean isThirdQuarter = coordinates.getX() <= 0 && coordinates.getY() <= 0;
+        return isThirdQuarter && Math.abs(coordinates.getY()) <= coordinates.getR() && Math.abs(coordinates.getX()) <= coordinates.getR();
+    }
+
+    private boolean isCircleHit(Coordinates coordinates) {
+        boolean isSecondQuarter = coordinates.getX() <= 0 && coordinates.getY() >= 0;
+        return isSecondQuarter && (coordinates.getX() * coordinates.getX() + coordinates.getY() * coordinates.getY() <= coordinates.getR() * coordinates.getR() / 4);
     }
 }
