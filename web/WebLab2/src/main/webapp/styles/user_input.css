@@ -1,0 +1,119 @@
+main .user_input #plot {
+    position: relative;
+    left: 100px;
+    top: 100px;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    background: #1d1d1d;
+    border-radius: 20px 20px 20px 20px;
+    transition: 0.5s
+}
+
+main .user_input #plot:hover {
+    box-shadow: 0 0 40px 5px #f41c52;
+}
+
+main .user_input form {
+    position: relative;
+    left: 700px;
+    width: 500px;
+    height: 400px;
+    bottom: 316px;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    background: #1d1d1d;
+    border-radius: 20px 20px 20px 20px;
+    transition: 0.5s;
+}
+
+main .user_input form:hover {
+    box-shadow: 0 0 40px 5px #f41c52;
+}
+
+main .user_input .X_value {
+    margin: 16px;
+    position: relative;
+    top: 30px;
+    left: 110px;
+}
+
+main .user_input .X_value input {
+    border-radius: 5px 5px 5px 5px;
+}
+
+main .user_input .selected {
+    background: red;
+}
+
+main .user_input .Y_value {
+    margin: 16px;
+    position: relative;
+    top: 30px;
+    left: 110px;
+}
+
+main .user_input .Y_value #Y_value {
+    width: 195px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+main .user_input .R_value {
+    margin: 16px;
+    position: relative;
+    top: 30px;
+    left: 110px;
+}
+
+main .user_input .R_value #R_value {
+    width: 195px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+main .user_input .Error_text {
+    margin: 15px;
+    position: relative;
+    top: 45px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: red;
+    font-size: 20px;
+}
+
+main .user_input .Error_text span {
+    margin: 4px;
+    font-family: sans-serif;
+}
+
+main .user_input .buttons {
+    position: absolute;
+    left: 100px;
+    top: 280px;
+}
+
+main .user_input .buttons #submit {
+    color: whitesmoke;
+    background: rgba(49, 49, 49, 0.83);
+    width: 150px;
+    height: 30px;
+}
+
+main .user_input .buttons #reset {
+    color: whitesmoke;
+    background: rgba(49, 49, 49, 0.83);
+    width: 150px;
+    height: 30px;
+}
+
+main .user_input #Alert_text {
+    margin: 15px;
+    position: absolute;
+    width: 100%;
+    top: 320px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: red;
+    font-family: sans-serif;
+    font-size: 20px;
+}
