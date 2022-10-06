@@ -1,0 +1,41 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    margin: auto;
+    padding: 20px;
+}
+
+.main-container__item {
+    text-align: center;
+}
+
+.datetime {
+    line-height: 45px;
+}
+
+.datetime__time {
+    font-size: 72px;
+}
+
+.index-menu__link {
+    display: inline-block;
+    height: 27px;
+    width: auto;
+    padding: 1px 6px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #ffffff;
+    background-color: #6c43af;
+}
+
+.index-menu__link:hover {
+    background-color: #513284;
+}
+
+.index-menu__link::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}

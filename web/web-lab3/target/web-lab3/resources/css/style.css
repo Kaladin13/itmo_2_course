@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: "Open Sans", "Arial", sans-serif;
+    background-color: #e9e6ee;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.topper {
+    font-size: 18px;
+    color: white;
+    background-color: #6c43af;
+}
+
+.main-header {
+    padding: 1em;
+    font-size: 15px;
+    text-align: center;
+}
+
+.main-header__back-link {
+    float: left;
+    margin-right: 20px;
+}
+
+.main-header__authors {
+    float: right;
+    text-align: right;
+}
+
+.main-header__info {
+    float: left;
+    text-align: left;
+}
