@@ -1,0 +1,73 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "JSX": true
+  },
+  "plugins": ["react"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "next/core-web-vitals",
+    "next"
+  ],
+  "rules": {
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true,
+        "ignoreMemberSort": false,
+        "allowSeparatedGroups": false
+      }
+    ],
+    "sort-keys": [
+      "error",
+      "asc",
+      {
+        "caseSensitive": true,
+        "natural": true,
+        "minKeys": 2
+      }
+    ],
+    "sort-vars": ["error", { "ignoreCase": true }],
+    "max-lines": [
+      "error",
+      {
+        "max": 250,
+        "skipBlankLines": true,
+        "skipComments": true
+      }
+    ],
+    "react/no-set-state": "off",
+    "react/prop-types": 0,
+    "react/jsx-no-duplicate-props": [
+      "error",
+      {
+        "ignoreCase": true
+      }
+    ],
+    "indent": ["error", 2],
+    "quotes": ["warn", "single"],
+    "jsx-quotes": ["error", "prefer-single"],
+    "object-curly-spacing": [
+      "error",
+      "always",
+      {
+        "arraysInObjects": true,
+        "objectsInObjects": false
+      }
+    ],
+    "semi": [0, "always"],
+    "no-multi-spaces": "error",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 2,
+        "maxBOF": 1
+      }
+    ]
+  }
+}

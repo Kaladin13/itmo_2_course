@@ -1,0 +1,13 @@
+{
+  "arrowParens": "always",
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "max-len": ["error", 140, 2],
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": false,
+  "bracketSameLine": false,
+  "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

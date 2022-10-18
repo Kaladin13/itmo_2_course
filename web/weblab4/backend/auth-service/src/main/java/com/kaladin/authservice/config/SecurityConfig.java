@@ -15,7 +15,7 @@ public class SecurityConfig {
                 .antMatchers("/user").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .oauth2Login();
+                .oauth2Login().defaultSuccessUrl("http://localhost:3000?g=true");
 
         return http.build();
     }

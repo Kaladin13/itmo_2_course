@@ -1,0 +1,37 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.2",
+    "@chakra-ui/react": "^2.2.1",
+    "@chakra-ui/theme-tools": "^2.0.2",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.9.0",
+    "axios": "^1.1.3",
+    "formik": "^2.2.9",
+    "framer-motion": "^6.3.0",
+    "mobx": "^6.6.2",
+    "mobx-react-lite": "^3.4.0",
+    "moment": "^2.29.4",
+    "next": "latest",
+    "react": "^18.2.0",
+    "react-clock": "^3.1.0",
+    "react-dom": "^18.2.0",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^3.3.1",
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "eslint": "^8.25.0",
+    "eslint-config-next": "^12.3.1",
+    "eslint-plugin-react": "^7.31.10",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.2"
+  }
+}
