@@ -1,5 +1,16 @@
-import { Box, Center, Spinner, Text } from '@chakra-ui/react'
-import { FC, useEffect, useState } from 'react'
+import {
+  Center,
+  Spinner,
+  Table,
+  TableContainer,
+  Tbody,
+  Td,
+  Text,
+  Th,
+  Thead,
+  Tr,
+} from '@chakra-ui/react'
+import { useEffect, useState } from 'react'
 
 import Api from '../../http/api'
 import { Hit } from '../../models/Hit'
@@ -27,7 +38,38 @@ const DotsTable = () => {
       </Center>
     )
   }
-  return <Box>{hits ? <Text></Text> : <Text>Нет данных</Text>}</Box>
+  return (
+    <Center>
+      {hits ? (
+        <TableContainer width={'50%'}>
+          <Table variant={'striped'} colorScheme={'blue'}>
+            <Thead>
+              <Tr>
+                <Th isNumeric>X</Th>
+                <Th isNumeric>Y</Th>
+                <Th isNumeric>R</Th>
+                <Th>Результат</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              {hits.map((hit, ind) => {
+                return (
+                  <Tr key={ind}>
+                    <Td isNumeric>{hit.x}</Td>
+                    <Td isNumeric>{hit.y}</Td>
+                    <Td isNumeric>{hit.r}</Td>
+                    <Td isNumeric>{hit.result}</Td>
+                  </Tr>
+                )
+              })}
+            </Tbody>
+          </Table>
+        </TableContainer>
+      ) : (
+        <Text>Нет данных</Text>
+      )}
+    </Center>
+  )
 }
 
 export default DotsTable

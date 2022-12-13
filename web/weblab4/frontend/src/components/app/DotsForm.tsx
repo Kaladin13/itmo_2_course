@@ -14,7 +14,9 @@ import {
 } from '@chakra-ui/react'
 import { FC, MouseEventHandler, useContext, useState } from 'react'
 
+import Api from '../../http/api'
 import { AuthContext } from '../../pages/_app'
+import { Dot } from '../../models/Dot'
 import { useFormik } from 'formik'
 import { validationSchemaR } from '../../validation/rValidation'
 import { validationSchemaX } from '../../validation/xValidarion'
@@ -24,7 +26,7 @@ import { validX } from '../../const/xValues'
 
 const DotsForm: FC = () => {
   const user = useContext(AuthContext)
-  const [Rvalue, setRvalue] = useState(0)
+  const [Rvalue, setRvalue] = useState(1)
   const [Xvalue, setXvalue] = useState(0)
   const [Yvalue, setYValue] = useState(0)
   // const canvas = useRef<HTMLCanvasElement>('canvas')
@@ -57,7 +59,13 @@ const DotsForm: FC = () => {
       // TODO: Добавить юзера сюда
     },
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2))
+      try {
+        const { x, y, r } = values
+        const { login, sessionId } = values
+        Api.sendHit({ r, x, y } as Dot, sessionId, login)
+      } catch {
+        alert(JSON.stringify(values, null, 2))
+      }
     },
     validationSchema: Yup.object({
       r: validationSchemaR,

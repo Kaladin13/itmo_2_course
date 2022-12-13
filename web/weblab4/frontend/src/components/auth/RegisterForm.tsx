@@ -8,6 +8,7 @@ import {
   InputLeftElement,
   InputRightElement,
 } from '@chakra-ui/react'
+/* eslint-disable indent */
 import {
   CheckIcon,
   SmallCloseIcon,
@@ -133,7 +134,6 @@ const RegisterForm: FC = () => {
         </InputGroup>
         {formik.touched.passwordConfirmation &&
         formik.errors.passwordConfirmation ? (
-          // eslint-disable-next-line indent
           <div>{formik.errors.passwordConfirmation}</div>
         ) : null}
         <Center>

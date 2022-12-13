@@ -1,3 +1,0 @@
-const drawGraph = (canvas) => {
-  // pass
-}

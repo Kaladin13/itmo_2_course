@@ -1,7 +1,7 @@
 import { makeAutoObservable } from 'mobx'
 
 export class UserAuth {
-  login: string | undefined = undefined
+  login: string | undefined = 'maksim'
   sessionId: number | undefined = undefined
 
   constructor() {

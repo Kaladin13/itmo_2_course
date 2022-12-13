@@ -43,7 +43,6 @@ const DotsCanvas: FC<DotsCanvasProps> = () => {
         w={'100%'}
         h={'100%'}
         bg={'blue.500'}
-        // opacity={0.3}
         backgroundColor={'rgba(100,100,230, 0.2)'}
         border={'solid 1px rgba(100,100,230, 0.7)'}
         rounded={'xl'}

@@ -14,7 +14,7 @@ import {
   ViewIcon,
   ViewOffIcon,
 } from '@chakra-ui/icons'
-import { FC, useContext, useState } from 'react'
+import { FC, useState } from 'react'
 
 import { loginValidationSchema } from '../../validation/loginValidation'
 import LoginWithForm from './LoginWithForm'
