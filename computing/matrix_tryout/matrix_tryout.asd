@@ -10,4 +10,5 @@
   :components ((:file "package")
                (:file "matrix_tryout")
                (:file "macros")
-               (:file "convert")))
+               (:file "convert")
+               (:file "iterate")))
