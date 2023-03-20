@@ -9,4 +9,5 @@
   :depends-on (#:lla)
   :components ((:file "package")
                (:file "matrix_tryout")
-               (:file "macros")))
+               (:file "macros")
+               (:file "convert")))
