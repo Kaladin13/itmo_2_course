@@ -34,7 +34,7 @@
     (vega:defplot simple-line-plot
       `(:title "Polygon probability graphic"
                :data ,interval-df
-               :mark :line
+               :mark (:type :line :point t)
                :encoding (:x (:field :X :type :nominal :title X)
                              :y (:field :prob :type :quantitative :title probability))))))
 
@@ -42,7 +42,7 @@
   (plot:plot
     (vega:defplot step-chart
       `(:title "Hystogram graphic"
-               :data ,emperic-df
+               :data ,interval-df
                :mark :bar
-               :encoding (:x (:field :X :bin (:maxbins 6) :title X)
-                             :y (:aggregate :count))))))
+               :encoding (:x (:field :X :title X :type :nominal)
+                             :y (:field :prob :type :quantitative))))))
