@@ -4,9 +4,14 @@
   :license "GPL"
   :version "0.0.1"
   :serial t
-  :depends-on ("plot/vega")
+  :depends-on ("plot/vega"
+               "lisp-stat")
+  :pathname "src/"
   :components ((:file "package")
-               (:file "src/main")
-               (:file "src/data")
-               (:file "src/distribution")
-               (:file "src/variational")))
+               (:file "main")
+               (:file "data")
+               (:file "distribution")
+               (:file "collect")
+               (:file "plotting")
+               (:file "rounding")
+               (:file "variational")))

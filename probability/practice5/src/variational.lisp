@@ -8,7 +8,7 @@
   (format T "Extreme values: ~D, ~{~D~} ~%"
     (first *data*) (last *data*)))
 
-(defvar range (- (first (last *data*)) (first *data*)))
+(defparameter range (- (first (last *data*)) (first *data*)))
 
 (defun get-range ()
   (format T "Sample range: ~D ~%" range))

@@ -8,6 +8,8 @@
 
 (get-range)
 
+(get-emperic-func)
+
 (get-standart-deviation)
 
 (emperic-plot)
