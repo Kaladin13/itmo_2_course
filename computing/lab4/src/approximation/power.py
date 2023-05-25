@@ -15,10 +15,10 @@ def power_approximation(points):
 
     lin_y = [log(y[i]) for i in range(n)]
 
-    result_values = line_approximation([(lin_x[i], lin_y[i]) for i in range(n)])
+    r = line_approximation([(lin_x[i], lin_y[i]) for i in range(n)])
 
-    a = exp(result_values['b'])
-    b = result_values['a']
+    a = exp(r['a'])
+    b = r['b']
 
     result = {'a': a, 'b': b}
 

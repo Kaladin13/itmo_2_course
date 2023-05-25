@@ -17,8 +17,8 @@ def exp_approximation(points):
 
     r = line_approximation([(x[i], lin_y[i]) for i in range(n)])
 
-    a = exp(r['b'])
-    b = r['a']
+    a = exp(r['a'])
+    b = r['b']
 
     result = {'a': a, 'b': b}
 
