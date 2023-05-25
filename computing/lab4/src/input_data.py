@@ -1,5 +1,6 @@
 def read_data():
-    response = input("Read data from file? (y/n)")
+    print("Read data from file? (y/n)")
+    response = input()
 
     if response == "n":
         matrix = read_stdin()
@@ -12,7 +13,7 @@ def read_data():
 def read_stdin():
     data = {'dots': []}
 
-    print("Type points with space delimiter and each new point from new line!")
+    print("Type points as {x y} with space delimiter and each new point from new line!")
 
     print("Enter \"s\" to finish.")
 

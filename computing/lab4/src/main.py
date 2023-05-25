@@ -11,7 +11,7 @@ from plot import plot_results
 
 
 def print_results(results):
-    print("Results for whole methods")
+    print("Results for every method: ")
     for key in results:
         if key != 'function':
             print(f'{key} = {results[key]}')
@@ -19,6 +19,7 @@ def print_results(results):
 
 def print_best(results):
     min_val = float('inf')
+    print("")
 
     best = None
     for key in results:
@@ -54,7 +55,8 @@ def main():
     data = sort_data(read_data())
     points = data['dots']
 
-    results = {'exp': exp_approximation(points), 'line': line_approximation(points), 'log': log_approximation(points),
+    results = {'exponential': exp_approximation(points), 'line': line_approximation(points),
+               'log': log_approximation(points),
                'power': power_approximation(points), 'square': square_approximation(points),
                'cube': cube_approximation(points)}
 
